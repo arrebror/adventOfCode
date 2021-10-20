@@ -50,6 +50,14 @@ int create_matrix(int** const gridp, const int ARR_SIZE) {
 	return 0;
 }
 
+void delete_matrix(int** const gridp, const int ARR_SIZE) {
+
+	for (int i = 0; i < ARR_SIZE; i++) {
+		delete[] gridp[i];
+	}
+	delete[] gridp;
+}
+
 void star2() {
 
 	const int ARR_SIZE = 400;
@@ -95,7 +103,9 @@ void star2() {
 
 	}
 	std::cout << " Value = " << gridp[x][y] << std::endl;
-	delete[] gridp;
+
+	delete_matrix(gridp, ARR_SIZE);
+	// delete[] gridp;
 }
 
 
