@@ -34,7 +34,7 @@ void star1() {
 
 }
 
-int create_matrix(int** gridp, const int ARR_SIZE) {
+int create_matrix(int** const gridp, const int ARR_SIZE) {
 
 	for (int k = 0; k < ARR_SIZE; k++)
 	{
@@ -53,7 +53,7 @@ int create_matrix(int** gridp, const int ARR_SIZE) {
 void star2() {
 
 	const int ARR_SIZE = 400;
-	int** gridp = new int*[ARR_SIZE]; 
+	int** const gridp = new int*[ARR_SIZE]; 
 
 	create_matrix(gridp, ARR_SIZE);
 
